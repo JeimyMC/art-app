@@ -1,0 +1,63 @@
+{
+  "city": [
+    {
+      "name": "A Coruña",
+      "art": [
+        {
+          "name": "Torre de Hércules",
+          "picture": "https://www.google.com/search?q=torre+de+hercules&tbm=isch&source=iu&ictx=1&fir=MM57BuoD4sNCCM%252CvRzx7ixEsX_QyM%252C_&vet=1&usg=AI4_-kS1LSlnf1wfBpi1VqG5K4KTDEqUMw&sa=X&ved=2ahUKEwjNp56Yu8vvAhUQzoUKHYQJA4UQ9QF6BAgcEAE&biw=1600&bih=828#imgrc=MM57BuoD4sNCCM"
+        },
+        { "name": "Científicos" },
+        { "name": "Muncyt" },
+        { "name": "Museo de Bellas Artes" }
+      ],
+      "show": false
+    },
+    {
+      "name": "Lugo",
+      "art": [
+        { "name": "Museo Provincial" },
+        { "name": "MHIL" },
+        { "name": "Domus de Mitreo" },
+        { "name": "Casa de los Mosaicos" }
+      ],
+      "show": false
+    },
+    {
+      "name": "Pontevedra",
+      "art": [
+        { "name": "Museo Provincial" },
+        { "name": "Museo Massó" },
+        { "name": "MASAT" }
+      ],
+      "show": false
+    },
+    {
+      "name": "Ourense",
+      "art": [
+        { "name": "Museo municipal" },
+        { "name": "Escolma de escultura" },
+        { "name": "Museo Catedralicio" },
+        { "name": "Museo Arqueológico Provincial Ourense" }
+      ],
+      "show": false
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
