@@ -21,6 +21,8 @@ const NewMuseum = ({ handleSubmit }) => {
   );
 };
 
-NewMuseum.propTypes = {};
+NewMuseum.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+};
 
 export default reduxForm({ form: "NewMuseum" })(NewMuseum);

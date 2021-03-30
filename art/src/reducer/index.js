@@ -7,7 +7,6 @@ import { reducer as reduxForm } from "redux-form";
 
 export default combineReducers({
   cities,
-
   art,
   museum,
   form: reduxForm,
@@ -31,4 +30,9 @@ export const getMuseumSelector = createSelector(
 export const postNewMuseumSelector = createSelector(
   (state) => state.newMuseum,
   (newMuseum) => newMuseum
+);
+
+export const postNewCitySelector = createSelector(
+  (state) => state.newCity,
+  (newCity) => newCity
 );

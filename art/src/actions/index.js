@@ -4,11 +4,13 @@ export const SET_DATA_ART_CITY = "SET_DATA_ART_CITY";
 export const GET_MUSEUM_INFO = "GET_MUSEUM_INFO";
 export const POST_NEW_MUSEUM = "POST_NEW_MUSEUM";
 export const GET_ART_DATA = "GET_ART_DATA";
+export const POST_NEW_CITY = "POST_NEW_CITY";
 
 const getCities = (payload) => ({ type: GET_CITIES, payload });
 const getArtCity = (payload) => ({ type: GET_ART_CITY, payload });
 const getMuseumInfo = (payload) => ({ type: GET_MUSEUM_INFO, payload });
 const postNewMuseumCity = (payload) => ({ type: POST_NEW_MUSEUM, payload });
+const postCity = (payload) => ({ type: POST_NEW_CITY, payload });
 
 export const fetchCities = () => {
   return (dispatch) => {
@@ -21,26 +23,24 @@ export const fetchCities = () => {
   };
 };
 
-export const getArtCityList = (cities, city) => {
+export const getArtCityList = (cities, id) => {
   return (dispatch) => {
-    const data = cities.find((item) => item.name === city);
+    const data = cities.find((item) => item.id === id);
     const dataShow = {
       [data.id]: data.artCity,
       show: (data.show = !data.show),
     };
-    const notShow = cities.filter((item) => item.name !== city);
+    const notShow = cities.filter((item) => item.id !== id);
     notShow.map((item) => {
       if (item.show) {
         return (item.show = false);
       }
       return item;
     });
-    if (city === "A Coruña") {
-      city = "Coruna";
-    }
-    return fetch(`http://localhost:3004/art-${city}`)
+
+    return fetch(`http://localhost:3004/city/${id}/art`)
       .then((data) => data.json())
-      .then((res) => dispatch(getArtCity({ [city]: res })))
+      .then((res) => dispatch(getArtCity({ [data.name]: res, id: data.id })))
       .catch((res) => console.log(res));
   };
 };
@@ -52,14 +52,26 @@ export const getMuseum = (city, name) => {
   };
 };
 
-export const postNewMuseum = (city, name, link, picture) => {
+export const postNewMuseum = (id, city, name, link, picture) => {
   return (dispatch) => {
-    return fetch(`http://localhost:3004/art-${city}`, {
+    return fetch(`http://localhost:3004/city/${id}/art`, {
       method: "POST",
       body: JSON.stringify({ name, link, picture }),
       headers: new Headers({ "Content-type": "application/json" }),
     })
       .then((v) => v.json())
       .then((res) => dispatch(postNewMuseumCity({ res, city })));
+  };
+};
+
+export const postNewCity = (city) => {
+  return (dispatch) => {
+    return fetch(`http://localhost:3004/city`, {
+      method: "POST",
+      body: JSON.stringify({ name: city, show: false }),
+      headers: new Headers({ "Content-type": "application/json" }),
+    })
+      .then((data) => data.json())
+      .then((res) => dispatch(postCity(res)));
   };
 };

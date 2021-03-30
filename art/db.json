@@ -19,94 +19,118 @@
       "id": 4,
       "name": "Ourense",
       "show": false
+    },
+    {
+      "name": "Barcelona",
+      "show": false,
+      "id": 5
     }
   ],
-  "art-Coruna": [
+  "art": [
     {
       "id": 1,
       "name": "Torre de Hércules",
       "picture": "https://canalhistoria.es/wp-content/uploads/2012/06/torre_hercules_portada-2048x1152.jpg",
-      "link": "http://www.torredeherculesacoruna.com/index.php?s=36&l=es"
+      "link": "http://www.torredeherculesacoruna.com/index.php?s=36&l=es",
+      "cityId": 1
     },
     {
       "id": 2,
       "name": "Domus",
-      "picture": "http://1.bp.blogspot.com/_n-j4YMN79xY/S7KSASHPk3I/AAAAAAAACIg/zcf8i6OzC2Q/s1600/1.jpgs"
+      "picture": "http://1.bp.blogspot.com/_n-j4YMN79xY/S7KSASHPk3I/AAAAAAAACIg/zcf8i6OzC2Q/s1600/1.jpgs",
+      "cityId": 1
     },
     {
       "id": 3,
       "name": "Muncyt",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/7d/MUNCYT_Alcobendas_-_01.jpg"
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/7d/MUNCYT_Alcobendas_-_01.jpg",
+      "cityId": 1
     },
     {
       "id": 4,
       "name": "Museo de Bellas Artes",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c1/A_Coru%C3%B1a_-_Museo_de_Bellas_Artes_1.JPG"
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c1/A_Coru%C3%B1a_-_Museo_de_Bellas_Artes_1.JPG",
+      "cityId": 1
     },
     {
       "name": "museo",
       "link": "https://es.wikipedia.org/wiki/Museo#:~:text=Un%20museo%20(del%20lat%C3%ADn%2C%20mus%C4%93um,prop%C3%B3sitos%20de%20estudio%20y%20educaci%C3%B3n%2C",
+      "cityId": 1,
       "id": 5
-    }
-  ],
-  "art-Lugo": [
+    },
     {
       "id": 1,
-      "name": "Museo Provincial"
+      "name": "Museo Provincial",
+      "cityId": 2
     },
     {
       "id": 2,
-      "name": "MHIL"
+      "name": "MHIL",
+      "cityId": 2
     },
     {
       "id": 3,
-      "name": "Domus de Mitreo"
+      "name": "Domus de Mitreo",
+      "cityId": 2
     },
     {
       "id": 4,
-      "name": "Casa de los Mosaicos"
-    }
-  ],
-  "art-Pontevedra": [
+      "name": "Casa de los Mosaicos",
+      "cityId": 2
+    },
     {
       "id": 1,
-      "name": "Museo Provincial"
+      "name": "Museo Provincial",
+      "cityId": 3
     },
     {
       "id": 2,
-      "name": "Museo Massó"
+      "name": "Museo Massó",
+      "cityId": 3
     },
     {
       "id": 3,
-      "name": "MASAT"
+      "name": "MASAT",
+      "cityId": 3
     },
     {
       "id": 4,
-      "name": "Casa "
+      "name": "Casa ",
+      "cityId": 3
     },
     {
       "name": "La Pinta",
       "link": "https://turismoriasbaixas.com/recursopan1?content=280376636",
       "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
-      "id": 5
-    }
-  ],
-  "art-Ourense": [
+      "id": 5,
+      "cityId": 3
+    },
     {
       "id": 1,
-      "name": "Museo municipal"
+      "name": "Museo municipal",
+      "cityId": 4
     },
     {
       "id": 2,
-      "name": "Escolma de escultura"
+      "name": "Escolma de escultura",
+      "cityId": 4
     },
     {
       "id": 3,
-      "name": "Museo Catedralicio"
+      "name": "Museo Catedralicio",
+      "cityId": 4
     },
     {
       "id": 4,
-      "name": "Museo Arqueológico Provincial Ourense"
+      "name": "Museo Arqueológico Provincial Ourense",
+      "cityId": 4
+    },
+    {
+      "name": "garsgasg",
+      "link": "aegawehgaw",
+      "picture": "aghgesagh",
+      "cityId": "5",
+      "id": 6
     }
   ],
   "posts": [

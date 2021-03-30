@@ -1,4 +1,4 @@
-import { GET_MUSEUM_INFO, POST_NEW_MUSEUM } from "./../actions";
+import { GET_MUSEUM_INFO } from "./../actions";
 
 export const museum = (state = {}, action) => {
   switch (action.type) {

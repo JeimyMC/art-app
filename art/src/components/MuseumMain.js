@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
 const MuseumMain = ({ data, btnBack }) => {
   return (
@@ -20,6 +19,9 @@ const MuseumMain = ({ data, btnBack }) => {
   );
 };
 
-MuseumMain.propTypes = {};
+MuseumMain.propTypes = {
+  data: PropTypes.object.isRequired,
+  btnBack: PropTypes.func.isRequired,
+};
 
 export default MuseumMain;

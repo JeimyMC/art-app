@@ -3,16 +3,9 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import * as actions from "../actions";
-import {
-  getCitiesList,
-  getArtCitySelector,
-  postNewMuseumSelector,
-  getArtDataSelector,
-} from "./../reducer";
-
+import { getCitiesList, getArtCitySelector } from "./../reducer";
 import Head from "./../components/Head";
 import ListCities from "./../components/ListCities";
-import { artCities } from "../reducer/cities";
 
 class Header extends Component {
   componentDidMount() {
@@ -20,20 +13,26 @@ class Header extends Component {
       this.props.fetchCities();
     }
   }
-  handleSubmit = (e) => {
+  handleSubmitMuseum = (e) => {
     e.preventDefault();
-
+    console.log(this.props.art.id);
+    const idCity = this.props.art.id;
     const list = Object.keys(this.props.art)[0];
     const name = e.target.name.value;
     const link = e.target.link.value;
     const picture = e.target.picture.value;
-    this.props.postNewMuseum(list, name, link, picture);
+    this.props.postNewMuseum(idCity, list, name, link, picture);
+  };
+  handleOnClickCity = (e) => {
+    e.preventDefault();
+    console.log(e.target.city.value);
+    this.props.postNewCity(e.target.city.value);
   };
 
-  onClickArt = (city) => {
+  onClickArt = (id) => {
     const { cities, getArtCityList } = this.props;
 
-    getArtCityList(cities, city);
+    getArtCityList(cities, id);
   };
   renderBody = () => {
     const { cities, art } = this.props;
@@ -45,15 +44,13 @@ class Header extends Component {
         show={cities.show}
         art={list}
         onClickArt={this.onClickArt}
-        handleSubmit={this.handleSubmit}
+        handleSubmit={this.handleSubmitMuseum}
+        handleOnClickCity={this.handleOnClickCity}
       ></ListCities>
     );
   };
 
   render() {
-    // const show = art.show;
-    // const onClickArt = (city) => {};
-
     return <Head title="Bienvenido" body={this.renderBody()}></Head>;
   }
 }

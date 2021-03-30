@@ -13,7 +13,7 @@ const ListCitiesItem = ({ cities, onClickArt, handleSubmit, art }) => {
         <City
           name={item.name}
           onClickCityName={() => {
-            onClickCity(item.name);
+            onClickCity(item.id);
           }}
           art={art}
           show={item.show}
@@ -27,6 +27,8 @@ const ListCitiesItem = ({ cities, onClickArt, handleSubmit, art }) => {
 ListCitiesItem.propTypes = {
   cities: PropTypes.array.isRequired,
   onClickArt: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  art: PropTypes.array,
 };
 
 export default ListCitiesItem;

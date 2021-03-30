@@ -13,7 +13,9 @@ const City = ({ name, art, onClickCityName, show, handleSubmit }) => {
       {show ? (
         <div>
           <ul>
-            <ListArtItem name={name} art={art}></ListArtItem>
+            {art.length > 0 ? (
+              <ListArtItem name={name} art={art}></ListArtItem>
+            ) : null}
           </ul>
           <button onClick={() => setBtnActive(btnShow)}>Nuevo museo</button>
           {btnActive ? (
@@ -30,6 +32,7 @@ City.propTypes = {
   art: PropTypes.array,
   onClickCityName: PropTypes.func.isRequired,
   show: PropTypes.bool,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default City;
