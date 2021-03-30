@@ -15,7 +15,7 @@ class Header extends Component {
   }
   handleSubmitMuseum = (e) => {
     e.preventDefault();
-    console.log(this.props.art.id);
+
     const idCity = this.props.art.id;
     const list = Object.keys(this.props.art)[0];
     const name = e.target.name.value;

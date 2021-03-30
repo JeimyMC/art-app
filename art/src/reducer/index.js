@@ -31,8 +31,3 @@ export const postNewMuseumSelector = createSelector(
   (state) => state.newMuseum,
   (newMuseum) => newMuseum
 );
-
-export const postNewCitySelector = createSelector(
-  (state) => state.newCity,
-  (newCity) => newCity
-);
