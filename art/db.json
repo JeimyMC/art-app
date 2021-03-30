@@ -1,46 +1,112 @@
 {
   "city": [
     {
+      "id": 1,
       "name": "A Coruña",
-      "art": [
-        {
-          "name": "Torre de Hércules",
-          "picture": "https://www.google.com/search?q=torre+de+hercules&tbm=isch&source=iu&ictx=1&fir=MM57BuoD4sNCCM%252CvRzx7ixEsX_QyM%252C_&vet=1&usg=AI4_-kS1LSlnf1wfBpi1VqG5K4KTDEqUMw&sa=X&ved=2ahUKEwjNp56Yu8vvAhUQzoUKHYQJA4UQ9QF6BAgcEAE&biw=1600&bih=828#imgrc=MM57BuoD4sNCCM"
-        },
-        { "name": "Científicos" },
-        { "name": "Muncyt" },
-        { "name": "Museo de Bellas Artes" }
-      ],
       "show": false
     },
     {
+      "id": 2,
       "name": "Lugo",
-      "art": [
-        { "name": "Museo Provincial" },
-        { "name": "MHIL" },
-        { "name": "Domus de Mitreo" },
-        { "name": "Casa de los Mosaicos" }
-      ],
       "show": false
     },
     {
+      "id": 3,
       "name": "Pontevedra",
-      "art": [
-        { "name": "Museo Provincial" },
-        { "name": "Museo Massó" },
-        { "name": "MASAT" }
-      ],
       "show": false
     },
     {
+      "id": 4,
       "name": "Ourense",
-      "art": [
-        { "name": "Museo municipal" },
-        { "name": "Escolma de escultura" },
-        { "name": "Museo Catedralicio" },
-        { "name": "Museo Arqueológico Provincial Ourense" }
-      ],
       "show": false
+    }
+  ],
+  "art-Coruna": [
+    {
+      "id": 1,
+      "name": "Torre de Hércules",
+      "picture": "https://canalhistoria.es/wp-content/uploads/2012/06/torre_hercules_portada-2048x1152.jpg",
+      "link": "http://www.torredeherculesacoruna.com/index.php?s=36&l=es"
+    },
+    {
+      "id": 2,
+      "name": "Domus",
+      "picture": "http://1.bp.blogspot.com/_n-j4YMN79xY/S7KSASHPk3I/AAAAAAAACIg/zcf8i6OzC2Q/s1600/1.jpgs"
+    },
+    {
+      "id": 3,
+      "name": "Muncyt",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/7d/MUNCYT_Alcobendas_-_01.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Museo de Bellas Artes",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c1/A_Coru%C3%B1a_-_Museo_de_Bellas_Artes_1.JPG"
+    },
+    {
+      "name": "museo",
+      "link": "https://es.wikipedia.org/wiki/Museo#:~:text=Un%20museo%20(del%20lat%C3%ADn%2C%20mus%C4%93um,prop%C3%B3sitos%20de%20estudio%20y%20educaci%C3%B3n%2C",
+      "id": 5
+    }
+  ],
+  "art-Lugo": [
+    {
+      "id": 1,
+      "name": "Museo Provincial"
+    },
+    {
+      "id": 2,
+      "name": "MHIL"
+    },
+    {
+      "id": 3,
+      "name": "Domus de Mitreo"
+    },
+    {
+      "id": 4,
+      "name": "Casa de los Mosaicos"
+    }
+  ],
+  "art-Pontevedra": [
+    {
+      "id": 1,
+      "name": "Museo Provincial"
+    },
+    {
+      "id": 2,
+      "name": "Museo Massó"
+    },
+    {
+      "id": 3,
+      "name": "MASAT"
+    },
+    {
+      "id": 4,
+      "name": "Casa "
+    },
+    {
+      "name": "La Pinta",
+      "link": "https://turismoriasbaixas.com/recursopan1?content=280376636",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
+      "id": 5
+    }
+  ],
+  "art-Ourense": [
+    {
+      "id": 1,
+      "name": "Museo municipal"
+    },
+    {
+      "id": 2,
+      "name": "Escolma de escultura"
+    },
+    {
+      "id": 3,
+      "name": "Museo Catedralicio"
+    },
+    {
+      "id": 4,
+      "name": "Museo Arqueológico Provincial Ourense"
     }
   ],
   "posts": [

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import City from "./City";
 
-const ListCitiesItem = ({ cities, onClickArt }) => {
+const ListCitiesItem = ({ cities, onClickArt, handleSubmit, art }) => {
   const onClickCity = (city) => {
     onClickArt(city);
   };
@@ -15,8 +15,9 @@ const ListCitiesItem = ({ cities, onClickArt }) => {
           onClickCityName={() => {
             onClickCity(item.name);
           }}
-          art={item.art}
+          art={art}
           show={item.show}
+          handleSubmit={handleSubmit}
         ></City>
       </li>
     );

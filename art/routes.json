@@ -1,0 +1,3 @@
+{
+  "/city/:id/art": "/city?id=:id/art"
+}

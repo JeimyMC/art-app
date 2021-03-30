@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import ListArtItem from "./ListArtItem";
+import NewMuseum from "./NewMuseum";
 
-const City = ({ name, art, onClickCityName, show }) => {
+const City = ({ name, art, onClickCityName, show, handleSubmit }) => {
+  const [btnActive, setBtnActive] = useState(false);
+  const btnShow = btnActive ? false : true;
+
   return (
-    <div onClick={onClickCityName}>
-      <p>{name}</p>
+    <div>
+      <p onClick={onClickCityName}>{name}</p>
       {show ? (
-        <ul>
-          <ListArtItem name={name} art={art}></ListArtItem>
-        </ul>
+        <div>
+          <ul>
+            <ListArtItem name={name} art={art}></ListArtItem>
+          </ul>
+          <button onClick={() => setBtnActive(btnShow)}>Nuevo museo</button>
+          {btnActive ? (
+            <NewMuseum handleSubmit={handleSubmit}></NewMuseum>
+          ) : null}
+        </div>
       ) : null}
     </div>
   );
@@ -17,7 +27,7 @@ const City = ({ name, art, onClickCityName, show }) => {
 
 City.propTypes = {
   name: PropTypes.string.isRequired,
-  art: PropTypes.array.isRequired,
+  art: PropTypes.array,
   onClickCityName: PropTypes.func.isRequired,
   show: PropTypes.bool,
 };

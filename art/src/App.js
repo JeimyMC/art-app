@@ -8,8 +8,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Header}></Route>
         <Route
-          path="/city/:name/:museum"
-          render={(props) => <Museum name={props.match.params.name}></Museum>}
+          path="/:city/:name/"
+          render={(props) => <Museum {...props.match.params}></Museum>}
         ></Route>
       </Switch>
     </Router>
