@@ -14,7 +14,7 @@ const ListCities = ({
   const [btnActive, setBtnActive] = useState(false);
   const btnShow = btnActive ? false : true;
   return (
-    <div>
+    <div className="cities">
       <ul>
         <ListCitiesItem
           cities={cities}

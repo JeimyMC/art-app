@@ -14,7 +14,7 @@ const postCity = (payload) => ({ type: POST_NEW_CITY, payload });
 
 export const fetchCities = () => {
   return (dispatch) => {
-    return fetch("http://localhost:3004/city")
+    return fetch("http://localhost:3002/city")
       .then((data) => data.json())
       .then((res) => {
         dispatch(getCities(res));
@@ -26,6 +26,7 @@ export const fetchCities = () => {
 export const getArtCityList = (cities, id) => {
   return (dispatch) => {
     const data = cities.find((item) => item.id === id);
+
     const dataShow = {
       [data.id]: data.artCity,
       show: (data.show = !data.show),
@@ -38,7 +39,7 @@ export const getArtCityList = (cities, id) => {
       return item;
     });
 
-    return fetch(`http://localhost:3004/city/${id}/art`)
+    return fetch(`http://localhost:3002/city/${id}/art`)
       .then((data) => data.json())
       .then((res) => dispatch(getArtCity({ [data.name]: res, id: data.id })))
       .catch((res) => console.log(res));
@@ -54,7 +55,7 @@ export const getMuseum = (city, name) => {
 
 export const postNewMuseum = (id, city, name, link, picture) => {
   return (dispatch) => {
-    return fetch(`http://localhost:3004/city/${id}/art`, {
+    return fetch(`http://localhost:3002/city/${id}/art`, {
       method: "POST",
       body: JSON.stringify({ name, link, picture }),
       headers: new Headers({ "Content-type": "application/json" }),
@@ -66,7 +67,7 @@ export const postNewMuseum = (id, city, name, link, picture) => {
 
 export const postNewCity = (city) => {
   return (dispatch) => {
-    return fetch(`http://localhost:3004/city`, {
+    return fetch(`http://localhost:3002/city`, {
       method: "POST",
       body: JSON.stringify({ name: city, show: false }),
       headers: new Headers({ "Content-type": "application/json" }),

@@ -3,18 +3,16 @@ import PropTypes from "prop-types";
 
 const MuseumMain = ({ data, btnBack }) => {
   return (
-    <div>
-      <button onClick={btnBack}>Volver</button>
-      <p>{data.name}</p>
-
-      <img
-        alt={data.name}
-        style={{ maxWidth: "20vw" }}
-        src={data.picture}
-      ></img>
-      <a href={data.link} target="_blank">
-        Página
-      </a>
+    <div className="name-museum">
+      <img alt={data.name} src={data.picture}></img>
+      <nav>
+        <a href={data.link} target="_blank">
+          Página web
+        </a>
+      </nav>
+      <button id="museum" onClick={btnBack}>
+        Volver
+      </button>
     </div>
   );
 };

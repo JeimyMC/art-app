@@ -3,27 +3,27 @@ import PropTypes from "prop-types";
 import ListArtItem from "./ListArtItem";
 import NewMuseum from "./NewMuseum";
 
-const City = ({ name, art, onClickCityName, show, handleSubmit }) => {
+const City = ({ name, art, onClickCityName, show, handleSubmit, id }) => {
   const [btnActive, setBtnActive] = useState(false);
   const btnShow = btnActive ? false : true;
-
+  const actived = show ? "museums-actived" : "museums";
   return (
-    <div>
+    <section className={actived}>
       <p onClick={onClickCityName}>{name}</p>
       {show ? (
-        <div>
+        <main>
           <ul>
             {art.length > 0 ? (
-              <ListArtItem name={name} art={art}></ListArtItem>
+              <ListArtItem name={name} art={art} id={id}></ListArtItem>
             ) : null}
           </ul>
           <button onClick={() => setBtnActive(btnShow)}>Nuevo museo</button>
           {btnActive ? (
             <NewMuseum handleSubmit={handleSubmit}></NewMuseum>
           ) : null}
-        </div>
+        </main>
       ) : null}
-    </div>
+    </section>
   );
 };
 

@@ -10,21 +10,47 @@ import {
 } from "./../reducer";
 import MuseumMain from "./../components/MuseumMain";
 import Head from "./../components/Head";
+import { cities } from "../reducer/cities";
 
 class Main extends Component {
+  componentDidMount() {
+    const { cities, art, name, getMuseum, fetchCities } = this.props;
+
+    if (cities.length === 0) {
+      fetchCities();
+    }
+    if (Object.keys(art).length > 0) {
+      getMuseum(Object.values(art)[0], name);
+    }
+  }
   handleClickBtn = () => this.props.history.goBack();
-  render() {
-    const { name, art, getMuseum, museum } = this.props;
-    getMuseum(Object.values(art)[0], name);
+
+  renderBody = () => {
+    const {
+      name,
+      art,
+      cities,
+      getMuseum,
+      id,
+      getArtCityList,
+      museum,
+    } = this.props;
+
+    if (cities.length > 0 && Object.keys(art).length === 0) {
+      getArtCityList(cities, Number(id));
+    }
+
+    if (Object.keys(art).length > 0 && Object.keys(museum).length === 0) {
+      getMuseum(Object.values(art)[0], name);
+    }
 
     return (
-      <Head
-        title={name}
-        body={
-          <MuseumMain data={museum} btnBack={this.handleClickBtn}></MuseumMain>
-        }
-      ></Head>
+      <MuseumMain data={museum} btnBack={this.handleClickBtn}></MuseumMain>
     );
+  };
+
+  render() {
+    return <Head title={this.props.name} body={this.renderBody()}></Head>;
   }
 }
 

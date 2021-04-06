@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  padding: 6vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container > header {
+  margin-bottom: 5vh;
+  color: white;
+  margin-top: 1rem;
+}
+
+.cities {
+  padding: 8vw;
+  background: url("./img/fondo.jpg") no-repeat center fixed;
+  height: 120vh;
+}
+
+.museums > p,
+.museums-actived > p {
+  font-size: 1.8rem;
+}
+
+.container li {
+  color: rgba(112, 1, 1, 0.863);
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+.museums > main > ul {
+  margin-left: 4vw;
+}
+
+.museums-actived {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4vw;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.657);
+}
+
+.museums-actived > p {
+  color: rgba(187, 127, 30, 0.863);
+}
+
+.museums-actived > main {
+  padding: 4vw;
+}
+
+.name-museum {
+  text-align: center;
+  background: no-repeat url("./img/fondo-dos.jpg");
+  height: 90vh;
+}
+
+.name-museum > img {
+  width: 60vw;
+  height: 32vh;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.657);
+  border-radius: 50%;
+  margin-top: 3rem;
+}
+
+.name-museum > nav > a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  bottom: -7rem;
+}
+
+button {
+  width: 60%;
+  height: 1.8rem;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid white;
+  margin-top: 1rem;
+  border-radius: 3px;
+}
+
+.submit {
+  background: rgba(231, 80, 80, 0.856);
+  border: none;
+  width: 40%;
+  height: 1.2rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+#museum {
+  position: relative;
+  bottom: -8rem;
+}
+
+form {
+  margin-top: 1rem;
+  text-align: center;
 }

@@ -9,7 +9,7 @@ const ListCitiesItem = ({ cities, onClickArt, handleSubmit, art }) => {
 
   return cities.map((item) => {
     return (
-      <li key={item.name}>
+      <li key={item.id}>
         <City
           name={item.name}
           onClickCityName={() => {
@@ -18,6 +18,7 @@ const ListCitiesItem = ({ cities, onClickArt, handleSubmit, art }) => {
           art={art}
           show={item.show}
           handleSubmit={handleSubmit}
+          id={item.id}
         ></City>
       </li>
     );

@@ -19,16 +19,6 @@
       "id": 4,
       "name": "Ourense",
       "show": false
-    },
-    {
-      "name": "Barcelona",
-      "show": false,
-      "id": 5
-    },
-    {
-      "name": "canarias",
-      "show": false,
-      "id": 6
     }
   ],
   "art": [
@@ -129,20 +119,6 @@
       "id": 4,
       "name": "Museo Arqueológico Provincial Ourense",
       "cityId": 4
-    },
-    {
-      "name": "garsgasg",
-      "link": "aegawehgaw",
-      "picture": "aghgesagh",
-      "cityId": "5",
-      "id": 6
-    },
-    {
-      "name": "Juan pepe",
-      "link": "kkjio",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
-      "cityId": "6",
-      "id": 7
     }
   ],
   "posts": [

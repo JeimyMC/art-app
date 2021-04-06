@@ -25,15 +25,15 @@ class Header extends Component {
   };
   handleOnClickCity = (e) => {
     e.preventDefault();
-    console.log(e.target.city.value);
+
     this.props.postNewCity(e.target.city.value);
   };
 
   onClickArt = (id) => {
     const { cities, getArtCityList } = this.props;
-
     getArtCityList(cities, id);
   };
+
   renderBody = () => {
     const { cities, art } = this.props;
 
@@ -51,7 +51,7 @@ class Header extends Component {
   };
 
   render() {
-    return <Head title="Bienvenido" body={this.renderBody()}></Head>;
+    return <Head title="Museos" body={this.renderBody()}></Head>;
   }
 }
 

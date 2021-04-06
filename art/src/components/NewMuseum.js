@@ -6,17 +6,32 @@ const NewMuseum = ({ handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="name">Nombre</label>
-        <Field name="name" component="input" type="text"></Field>
+        <label htmlFor="name"></label>
+        <Field
+          name="name"
+          component="input"
+          type="text"
+          placeholder="Nombre"
+        ></Field>
         <div>
-          <label htmlFor="link">Enlace museo</label>
+          <label htmlFor="link"></label>
 
-          <Field name="link" component="input" type="text"></Field>
+          <Field
+            name="link"
+            component="input"
+            type="text"
+            placeholder="Enlace museo"
+          ></Field>
         </div>
-        <label htmlFor="picture">Enlace foto</label>
-        <Field name="picture" component="input" type="text"></Field>
+        <label htmlFor="picture"></label>
+        <Field
+          name="picture"
+          component="input"
+          type="text"
+          placeholder="Enlace foto"
+        ></Field>
       </div>
-      <input type="submit" value="Agregar"></input>
+      <input className="submit" type="submit" value="Agregar"></input>
     </form>
   );
 };

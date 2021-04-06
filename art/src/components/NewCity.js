@@ -5,9 +5,14 @@ import { reduxForm, Field } from "redux-form";
 const NewCity = ({ handleOnClickCity }) => {
   return (
     <form onSubmit={handleOnClickCity}>
-      <label htmlFor="city">Ciudad</label>
-      <Field name="city" component="input" type="text"></Field>
-      <input type="submit" value="Guardar"></input>
+      <label htmlFor="city"></label>
+      <Field
+        name="city"
+        component="input"
+        type="text"
+        placeholder="Ciudad"
+      ></Field>
+      <input className="submit" type="submit" value="Guardar"></input>
     </form>
   );
 };
