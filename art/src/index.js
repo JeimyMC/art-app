@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./store";
+import app from "./App.css";
 
 ReactDOM.render(
   <Provider store={store}>

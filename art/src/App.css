@@ -4,12 +4,12 @@
   padding: 0;
 }
 
-body {
-  background-color: black;
-}
-
 li {
   list-style: none;
+}
+
+body {
+  background-color: black;
 }
 
 a {
@@ -18,18 +18,20 @@ a {
 }
 
 .container {
-  padding: 6vw;
+  margin: 10%;
+  min-width: 300px;
 }
 
 .container > header {
-  margin-bottom: 5vh;
+  margin: 2rem 0;
   color: white;
-  margin-top: 1rem;
 }
 
 .cities {
-  padding: 8vw;
-  background: url("./img/fondo.jpg") no-repeat center fixed;
+  padding: 30px;
+  background: url("./img/fondo.jpg") center no-repeat fixed;
+  max-width: 400px;
+  min-width: 250px;
   height: 120vh;
 }
 
@@ -41,7 +43,7 @@ a {
 .container li {
   color: rgba(112, 1, 1, 0.863);
   font-weight: bold;
-  margin-bottom: 2vh;
+  margin-bottom: 1rem;
 }
 
 .museums > main > ul {
@@ -50,7 +52,7 @@ a {
 
 .museums-actived {
   background: rgba(0, 0, 0, 0.4);
-  padding: 4vw;
+  padding: 1rem;
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.657);
 }
 
@@ -59,28 +61,28 @@ a {
 }
 
 .museums-actived > main {
-  padding: 4vw;
+  padding: 0.5rem;
 }
 
 .name-museum {
   text-align: center;
   background: no-repeat url("./img/fondo-dos.jpg");
-  height: 90vh;
+  height: 600px;
+  width: 300px;
 }
 
-.name-museum > img {
-  width: 60vw;
-  height: 32vh;
+.imgMuseum {
+  width: 170px;
+  height: 170px;
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.657);
   border-radius: 50%;
   margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .name-museum > nav > a {
   font-size: 1.5rem;
   font-weight: bold;
-  position: relative;
-  bottom: -7rem;
 }
 
 button {
@@ -101,15 +103,14 @@ button {
   width: 40%;
   height: 1.2rem;
   color: white;
-  margin-top: 1rem;
-}
-
-#museum {
-  position: relative;
-  bottom: -8rem;
 }
 
 form {
-  margin-top: 1rem;
+  margin: 3rem 0;
   text-align: center;
+}
+
+.embarcacion {
+  width: 20vw;
+  margin-top: 3rem;
 }

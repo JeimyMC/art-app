@@ -5,12 +5,20 @@ export const GET_MUSEUM_INFO = "GET_MUSEUM_INFO";
 export const POST_NEW_MUSEUM = "POST_NEW_MUSEUM";
 export const GET_ART_DATA = "GET_ART_DATA";
 export const POST_NEW_CITY = "POST_NEW_CITY";
+export const DELETE_MUSEUM = "DELETE_MUSEUM";
+export const UPDATE_MUSEUM = "UPDATE_MUSEUM";
+export const DELETE_CITY = "DELETE_CITY";
+export const DELETE_ALL_MUSEUM = "DELETE_ALL_MUSEUM";
 
 const getCities = (payload) => ({ type: GET_CITIES, payload });
 const getArtCity = (payload) => ({ type: GET_ART_CITY, payload });
 const getMuseumInfo = (payload) => ({ type: GET_MUSEUM_INFO, payload });
 const postNewMuseumCity = (payload) => ({ type: POST_NEW_MUSEUM, payload });
 const postCity = (payload) => ({ type: POST_NEW_CITY, payload });
+const delMuseum = (payload) => ({ type: DELETE_MUSEUM, payload });
+const upMuseum = (payload) => ({ type: UPDATE_MUSEUM, payload });
+const delCity = (payload) => ({ type: DELETE_CITY, payload });
+const delAllMuseums = (payload) => ({ type: DELETE_ALL_MUSEUM, payload });
 
 export const fetchCities = () => {
   return (dispatch) => {
@@ -74,5 +82,58 @@ export const postNewCity = (city) => {
     })
       .then((data) => data.json())
       .then((res) => dispatch(postCity(res)));
+  };
+};
+
+export const deleteMuseum = (id) => {
+  return (dispatch) => {
+    return fetch(`http://localhost:3002/art/${id}`, {
+      method: "DELETE",
+      headers: new Headers({ "Content-type": "application/json" }),
+    })
+      .then((res) => res.json())
+      .then((data) => dispatch(delMuseum(data)))
+      .catch((err) => console.log(err));
+  };
+};
+
+export const updateMuseum = (idMuseum, cityId, name, link, picture) => {
+  return (dispatch) => {
+    return fetch(`http://localhost:3002/art/${idMuseum}`, {
+      method: "PUT",
+      body: JSON.stringify({ name, link, picture, cityId }),
+      headers: new Headers({ "Content-type": "application/json" }),
+    })
+      .then((res) => res.json())
+      .then((data) => dispatch(upMuseum(data)))
+      .catch((err) => console.log(err));
+  };
+};
+
+export const delecteAllMuseums = (museums) => {
+  return (dispatch) => {
+    return museums.map((item) => {
+      return fetch(`http://localhost:3002/art/${item.id}`, {
+        method: "DELETE",
+        headers: new Headers({ "Content-type": "application/json" }),
+      })
+        .then((res) => res.json())
+        .then(() => dispatch(delAllMuseums({})))
+        .catch((err) => console.log(err));
+    });
+  };
+};
+
+export const deleteCity = (cities, id) => {
+  const listCities = cities.filter((item) => item.id !== id);
+
+  return (dispatch) => {
+    return fetch(`http://localhost:3002/city/${id}`, {
+      method: "DELETE",
+      headers: new Headers({ "Content-type": "application/json" }),
+    })
+      .then((res) => res.json())
+      .then((data) => dispatch(delCity(listCities)))
+      .catch((err) => console.log(err));
   };
 };

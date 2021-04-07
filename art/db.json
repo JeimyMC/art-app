@@ -23,11 +23,11 @@
   ],
   "art": [
     {
-      "id": 1,
       "name": "Torre de Hércules",
-      "picture": "https://canalhistoria.es/wp-content/uploads/2012/06/torre_hercules_portada-2048x1152.jpg",
-      "link": "http://www.torredeherculesacoruna.com/index.php?s=36&l=es",
-      "cityId": 1
+      "link": "https://turismoriasbaixas.com/recursopan1?content=280376636",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
+      "cityId": "1",
+      "id": 1
     },
     {
       "id": 2,
@@ -48,77 +48,63 @@
       "cityId": 1
     },
     {
-      "name": "museo",
-      "link": "https://es.wikipedia.org/wiki/Museo#:~:text=Un%20museo%20(del%20lat%C3%ADn%2C%20mus%C4%93um,prop%C3%B3sitos%20de%20estudio%20y%20educaci%C3%B3n%2C",
-      "cityId": 1,
-      "id": 5
-    },
-    {
-      "id": 1,
-      "name": "Museo Provincial",
-      "cityId": 2
-    },
-    {
-      "id": 2,
+      "id": 6,
       "name": "MHIL",
       "cityId": 2
     },
     {
-      "id": 3,
+      "id": 7,
       "name": "Domus de Mitreo",
       "cityId": 2
     },
     {
-      "id": 4,
+      "id": 8,
       "name": "Casa de los Mosaicos",
       "cityId": 2
     },
     {
-      "id": 1,
+      "id": 9,
       "name": "Museo Provincial",
       "cityId": 3
     },
     {
-      "id": 2,
+      "id": 10,
       "name": "Museo Massó",
       "cityId": 3
     },
     {
-      "id": 3,
+      "id": 11,
       "name": "MASAT",
       "cityId": 3
     },
     {
-      "id": 4,
-      "name": "Casa ",
-      "cityId": 3
-    },
-    {
-      "name": "La Pinta",
-      "link": "https://turismoriasbaixas.com/recursopan1?content=280376636",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
-      "id": 5,
-      "cityId": 3
-    },
-    {
-      "id": 1,
       "name": "Museo municipal",
-      "cityId": 4
+      "link": "kkjioknijoj",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
+      "cityId": "4",
+      "id": 14
     },
     {
-      "id": 2,
+      "id": 15,
       "name": "Escolma de escultura",
       "cityId": 4
     },
     {
-      "id": 3,
+      "id": 16,
       "name": "Museo Catedralicio",
       "cityId": 4
     },
     {
-      "id": 4,
+      "id": 17,
       "name": "Museo Arqueológico Provincial Ourense",
       "cityId": 4
+    },
+    {
+      "name": "jeimy miranda",
+      "link": "https://turismoriasbaixas.com/recursopan1?content=280376636",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
+      "cityId": "3",
+      "id": 18
     }
   ],
   "posts": [

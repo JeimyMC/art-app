@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import App from "./../App.css";
 
 const Head = ({ title, body }) => {
   return (

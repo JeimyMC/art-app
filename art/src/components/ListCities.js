@@ -10,6 +10,7 @@ const ListCities = ({
   handleSubmit,
   art,
   handleOnClickCity,
+  onClickDelCity,
 }) => {
   const [btnActive, setBtnActive] = useState(false);
   const btnShow = btnActive ? false : true;
@@ -22,6 +23,7 @@ const ListCities = ({
           onClickArt={onClickArt}
           handleSubmit={handleSubmit}
           art={art}
+          onClickDelCity={onClickDelCity}
         ></ListCitiesItem>
       </ul>
       <button onClick={() => setBtnActive(btnShow)}>Añadir ciudad</button>

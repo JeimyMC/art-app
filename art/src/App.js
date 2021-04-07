@@ -8,7 +8,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Header}></Route>
         <Route
-          path="/:city/:name/:id"
+          path="/:idCity/:city/:name/:idMuseum"
           render={(props) => <Museum {...props.match.params}></Museum>}
         ></Route>
       </Switch>

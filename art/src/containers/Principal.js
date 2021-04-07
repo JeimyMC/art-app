@@ -21,7 +21,11 @@ class Header extends Component {
     const name = e.target.name.value;
     const link = e.target.link.value;
     const picture = e.target.picture.value;
-    this.props.postNewMuseum(idCity, list, name, link, picture);
+
+    this.props.postNewMuseum(Number(idCity), list, name, link, picture);
+    e.target.name.value = "";
+    e.target.link.value = "";
+    e.target.picture.value = "";
   };
   handleOnClickCity = (e) => {
     e.preventDefault();
@@ -32,6 +36,19 @@ class Header extends Component {
   onClickArt = (id) => {
     const { cities, getArtCityList } = this.props;
     getArtCityList(cities, id);
+  };
+
+  onClickDelCity = (id) => {
+    const {
+      art,
+      delecteAllMuseums,
+      deleteCity,
+      fetchCities,
+      cities,
+    } = this.props;
+    delecteAllMuseums(Object.values(art)[0]);
+    deleteCity(cities, id);
+    fetchCities();
   };
 
   renderBody = () => {
@@ -46,6 +63,7 @@ class Header extends Component {
         onClickArt={this.onClickArt}
         handleSubmit={this.handleSubmitMuseum}
         handleOnClickCity={this.handleOnClickCity}
+        onClickDelCity={this.onClickDelCity}
       ></ListCities>
     );
   };

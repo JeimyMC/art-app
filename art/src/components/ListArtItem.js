@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const ListArtItem = ({ art, name, id }) => {
   return art.map((item) => (
     <li key={item.name}>
-      <Link to={`/${name}/${item.name}/${id}`}>{item.name}</Link>
+      <Link to={`/${id}/${name}/${item.name}/${item.id}`}>{item.name}</Link>
     </li>
   ));
 };
