@@ -16,36 +16,39 @@
       "show": false
     },
     {
-      "id": 4,
-      "name": "Ourense",
-      "show": false
+      "name": "",
+      "show": false,
+      "id": 4
     }
   ],
   "art": [
     {
       "name": "Torre de Hércules",
-      "link": "https://turismoriasbaixas.com/recursopan1?content=280376636",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
+      "link": "https://es.wikipedia.org/wiki/Torre_de_H%C3%A9rcules",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/e/eb/A_coruna_torre_de_hercules_sunset_edit.jpg",
       "cityId": "1",
       "id": 1
     },
     {
-      "id": 2,
       "name": "Domus",
-      "picture": "http://1.bp.blogspot.com/_n-j4YMN79xY/S7KSASHPk3I/AAAAAAAACIg/zcf8i6OzC2Q/s1600/1.jpgs",
-      "cityId": 1
+      "link": "https://www.coruna.gal/mc2/es/domus?argIdioma=es",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/93/Domus.jpg",
+      "cityId": "1",
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Muncyt",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/7d/MUNCYT_Alcobendas_-_01.jpg",
-      "cityId": 1
+      "link": "https://es.wikipedia.org/wiki/Museo_Nacional_de_Ciencia_y_Tecnolog%C3%ADa",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Museo_Nacional_de_Ciencia_e_Tecnolox%C3%ADa-MUNCYT.jpg",
+      "cityId": "1",
+      "id": 3
     },
     {
-      "id": 4,
       "name": "Museo de Bellas Artes",
+      "link": "http://museobelasartescoruna.xunta.gal/index.php?id=434",
       "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c1/A_Coru%C3%B1a_-_Museo_de_Bellas_Artes_1.JPG",
-      "cityId": 1
+      "cityId": "1",
+      "id": 4
     },
     {
       "id": 6,
@@ -76,35 +79,6 @@
       "id": 11,
       "name": "MASAT",
       "cityId": 3
-    },
-    {
-      "name": "Museo municipal",
-      "link": "kkjioknijoj",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
-      "cityId": "4",
-      "id": 14
-    },
-    {
-      "id": 15,
-      "name": "Escolma de escultura",
-      "cityId": 4
-    },
-    {
-      "id": 16,
-      "name": "Museo Catedralicio",
-      "cityId": 4
-    },
-    {
-      "id": 17,
-      "name": "Museo Arqueológico Provincial Ourense",
-      "cityId": 4
-    },
-    {
-      "name": "jeimy miranda",
-      "link": "https://turismoriasbaixas.com/recursopan1?content=280376636",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/64/LaPinta.jpg",
-      "cityId": "3",
-      "id": 18
     }
   ],
   "posts": [

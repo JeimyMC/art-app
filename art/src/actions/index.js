@@ -9,6 +9,7 @@ export const DELETE_MUSEUM = "DELETE_MUSEUM";
 export const UPDATE_MUSEUM = "UPDATE_MUSEUM";
 export const DELETE_CITY = "DELETE_CITY";
 export const DELETE_ALL_MUSEUM = "DELETE_ALL_MUSEUM";
+export const DELETE_ART = "DELETE_ART";
 
 const getCities = (payload) => ({ type: GET_CITIES, payload });
 const getArtCity = (payload) => ({ type: GET_ART_CITY, payload });
@@ -18,6 +19,7 @@ const postCity = (payload) => ({ type: POST_NEW_CITY, payload });
 const delMuseum = (payload) => ({ type: DELETE_MUSEUM, payload });
 const upMuseum = (payload) => ({ type: UPDATE_MUSEUM, payload });
 const delCity = (payload) => ({ type: DELETE_CITY, payload });
+const delArt = (payload) => ({ type: DELETE_ART, payload });
 const delAllMuseums = (payload) => ({ type: DELETE_ALL_MUSEUM, payload });
 
 export const fetchCities = () => {
@@ -128,6 +130,7 @@ export const deleteCity = (cities, id) => {
   const listCities = cities.filter((item) => item.id !== id);
 
   return (dispatch) => {
+    dispatch(delArt({ name: [] }));
     return fetch(`http://localhost:3002/city/${id}`, {
       method: "DELETE",
       headers: new Headers({ "Content-type": "application/json" }),

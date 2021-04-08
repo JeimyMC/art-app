@@ -9,7 +9,9 @@ function App() {
         <Route exact path="/" component={Header}></Route>
         <Route
           path="/:idCity/:city/:name/:idMuseum"
-          render={(props) => <Museum {...props.match.params}></Museum>}
+          render={(props) =>
+            props ? <Museum {...props.match.params}></Museum> : null
+          }
         ></Route>
       </Switch>
     </Router>

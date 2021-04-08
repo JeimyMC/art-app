@@ -7,7 +7,7 @@ export const cities = (state = [], action) => {
     case POST_NEW_CITY:
       return [...state, action.payload];
     case DELETE_CITY:
-      return [...state, action.payload];
+      return [...state];
     default:
       return state;
   }
